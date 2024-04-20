@@ -11,8 +11,8 @@ public class Parallax : MonoBehaviour
     // Efecto de paralaje
     public float parallaxEffect;
 
-    // Variable para indicar si el jugador ha perdido
-    private bool playerLost = false;
+    // Variable para indicar si el juego ha terminado
+    private bool gameOver = false;
 
     // Método llamado al inicio
     void Start()
@@ -27,29 +27,28 @@ public class Parallax : MonoBehaviour
     // Método llamado en cada frame
     void Update()
     {
-        // Si el jugador ha perdido, detiene el paralaje
-        if (playerLost)
+
+        // Si el juego ha terminado, detiene el paralaje
+        if (!Controller_Hud.gameOver)
         {
-            // Desactiva completamente el script Parallax
-            enabled = false;
-            return;
+          
+            transform.position = new Vector3(transform.position.x - parallaxEffect, transform.position.y, transform.position.z);
+
         }
 
-        // Calcula la nueva posición del fondo con efecto de paralaje
-        transform.position = new Vector3(transform.position.x - parallaxEffect, transform.position.y, transform.position.z);
+       
 
         // Si la posición local del fondo en el eje X es menor que -20 (un valor arbitrario)
         if (transform.localPosition.x < -20)
-        {
-            // Reinicia la posición del fondo al lado opuesto
-            transform.localPosition = new Vector3(20, transform.localPosition.y, transform.localPosition.z);
-        }
+            {
+                // Reinicia la posición del fondo al lado opuesto
+                transform.localPosition = new Vector3(20, transform.localPosition.y, transform.localPosition.z);
+            }
+        
     }
 
-    // Método para detener el paralaje cuando el jugador pierde
-    public void StopParallax()
-    {
-        playerLost = true;
-    }
+    
 }
+
+
 

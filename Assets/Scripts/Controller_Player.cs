@@ -92,7 +92,7 @@ public class Controller_Player : MonoBehaviour
             Destroy(this.gameObject);
             Controller_Hud.gameOver = true;
             // Detiene el paralaje
-            parallaxScript.StopParallax();
+        
         }
 
         // Si colisiona con el suelo, indica que el jugador está en el suelo
@@ -111,4 +111,5 @@ public class Controller_Player : MonoBehaviour
         }
     }
 }
+
 
