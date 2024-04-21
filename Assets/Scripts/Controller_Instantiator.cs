@@ -15,7 +15,7 @@ public class Controller_Instantiator : MonoBehaviour
     void Start()
     {
         // Se establece la velocidad inicial de los enemigos
-        Controller_Enemy.enemyVelocity = 2;
+        Controller_Enemy.enemyVelocity = 1;
     }
 
     void Update()
