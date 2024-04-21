@@ -12,7 +12,7 @@ public class Controller_Player : MonoBehaviour
     private int i = 0;
     // Indica si el jugador está en el suelo
     private bool floored;
-
+    public GameObject sonidoDeSalto;
     // Referencia al script Parallax
     private Parallax parallaxScript;
 
@@ -45,6 +45,7 @@ public class Controller_Player : MonoBehaviour
             // Verifica si el jugador está en el suelo y presiona la tecla de salto (W)
             if (Input.GetKeyDown(KeyCode.W))
             {
+                Instantiate(sonidoDeSalto);
                 // Aplica una fuerza hacia arriba al jugador para simular el salto
                 rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode.Impulse);
             }
