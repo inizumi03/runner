@@ -5,13 +5,13 @@ using UnityEngine;
 public class TiempoDeVida : MonoBehaviour
 {
     public float tiempoDeVida;
-    // Start is called before the first frame update
+    //codigo usado para destruir el objeto que genera el ruido
     void Start()
     {
         Destroy(gameObject, tiempoDeVida);
     }
 
-    // Update is called once per frame
+  
     void Update()
     {
         

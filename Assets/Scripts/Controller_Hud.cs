@@ -28,7 +28,7 @@ public class Controller_Hud : MonoBehaviour
         if (gameOver)
         {
             Time.timeScale = 0;
-            gameOverText.text = "Game Over \n Total Distance: " + ((int)distance).ToString();
+            gameOverText.text = "Game Over \n Puse R Para reintentar \n Total Distance: " + ((int)distance).ToString();
             gameOverText.gameObject.SetActive(true);
 
             // Detener el sonido de la cámara principal

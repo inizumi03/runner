@@ -30,7 +30,7 @@ public class Controller_Instantiator : MonoBehaviour
     {
         // Incrementa el tiempo transcurrido Calcula la nueva velocidad de los enemigos utilizando una interpolación suave entre dos valores
         time += Time.deltaTime;
-        Controller_Enemy.enemyVelocity = Mathf.SmoothStep(1f, 15f, time / 45f);
+        Controller_Enemy.enemyVelocity = Mathf.SmoothStep(1f, 10f, time / 45f);
     }
 
     private void SpawnEnemies()
